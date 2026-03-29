@@ -1,0 +1,668 @@
+/* ========================================
+   1) Global reset and base styles
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Arabic", sans-serif;
+  line-height: 1.9;
+  color: #3b2a1a;
+  background: #fffdf8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+/* ========================================
+   2) Layout helpers
+======================================== */
+
+.container {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.narrow {
+  width: min(800px, 100%);
+}
+
+.section-space {
+  padding: 80px 0;
+}
+
+.alt-section {
+  background: #f1ece3;
+}
+
+.section-more {
+  margin-top: 28px;
+  text-align: center;
+}
+
+/* ========================================
+   3) Header and navigation
+======================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+/* Main logo block */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 34px;
+  font-family: "Amiri", serif;
+  font-weight: 700;
+  color: #2f2a24;
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+}
+
+.logo-text {
+  letter-spacing: 2px;
+}
+
+/* Main navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.main-nav a {
+  margin-left: 18px;
+  color: #4a3522;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: #b28a56;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #3f2d1f;
+}
+
+/* ========================================
+   4) Hero sections
+======================================== */
+
+.hero {
+  padding: 110px 0 90px;
+  background:
+    radial-gradient(circle at top right, rgba(138, 90, 43, 0.12), transparent 30%),
+    linear-gradient(to bottom, #fbf8f3, #f3ede2);
+}
+
+.hero-inner {
+  padding: 95px 0 75px;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-tag {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #efe4d3;
+  color: #7b5229;
+  font-size: 0.95rem;
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  color: #2a2118;
+}
+
+.hero-text {
+  width: min(750px, 100%);
+  margin: 0 auto 28px;
+  font-size: 1.1rem;
+  color: #564b40;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ========================================
+   5) Buttons and section headings
+======================================== */
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 14px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.btn-primary {
+  background: #8a5a2b;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #74471d;
+}
+
+.btn-secondary {
+  border: 1px solid #c9b79f;
+  background: #fffaf4;
+  color: #5d4834;
+}
+
+.btn-secondary:hover {
+  background: #f1e7da;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-kicker {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #8a5a2b;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.section-heading h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  color: #2d241b;
+}
+
+.section-text {
+  margin: 0;
+  color: #5d5448;
+  font-size: 1.03rem;
+}
+
+/* ========================================
+   6) Cards and content grids
+======================================== */
+
+.cards-grid {
+  display: grid;
+  gap: 22px;
+}
+
+.cards-grid-large {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cards-grid-small {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  background: #fffdf9;
+  border: 1px solid #eadfce;
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: 0 10px 30px rgba(74, 55, 34, 0.05);
+}
+
+.card h3,
+.card-feature h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2f261d;
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 0;
+  color: #5b5145;
+}
+
+.card-badge {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f3e8d9;
+  color: #7b5229;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 18px;
+  color: #8a5a2b;
+  font-weight: 700;
+}
+
+/* ========================================
+   7) Featured article and home page blocks
+======================================== */
+
+.featured-article {
+  background: #fffaf2;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.idea-home {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.quote-highlight {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 2;
+  color: #4b3520;
+}
+
+/* ========================================
+   8) Article pages
+======================================== */
+
+.article-layout {
+  display: grid;
+  grid-template-columns: 2fr 320px;
+  gap: 32px;
+  align-items: start;
+}
+
+.article-content {
+  background: #fffdf9;
+  border: 1px solid #eadfce;
+  border-radius: 22px;
+  padding: 34px;
+  box-shadow: 0 10px 30px rgba(74, 55, 34, 0.05);
+}
+
+/* Typography inside article content */
+.article-content p {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #3f382f;
+  font-size: 1.05rem;
+  line-height: 2.1;
+}
+
+.article-content h2 {
+  margin-top: 34px;
+  margin-bottom: 12px;
+  color: #2d241b;
+  font-size: 1.45rem;
+}
+
+.article-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  color: #7b6d5e;
+  font-size: 0.95rem;
+}
+
+.article-meta span {
+  background: #f3e8d9;
+  color: #7b5229;
+  padding: 7px 12px;
+  border-radius: 999px;
+}
+
+/* Sidebar on article pages */
+.article-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-card {
+  background: #fffdf9;
+  border: 1px solid #eadfce;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(74, 55, 34, 0.05);
+}
+
+.sidebar-card h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #2f261d;
+}
+
+.sidebar-list {
+  margin: 0;
+  padding-right: 18px;
+  color: #564d42;
+}
+
+.sidebar-list li {
+  margin-bottom: 10px;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-links a {
+  color: #8a5a2b;
+  font-weight: 700;
+}
+
+/* ========================================
+   9) Quotes
+======================================== */
+
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.quote-card {
+  margin: 0;
+  background: #ffffff;
+  border-right: 5px solid #8a5a2b;
+  border-radius: 18px;
+  padding: 24px;
+  color: #3e342b;
+  box-shadow: 0 10px 26px rgba(60, 43, 24, 0.05);
+}
+
+.quote-card blockquote {
+  margin: 0;
+}
+
+.quote-card p {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+.quote-source {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #eadfce;
+  color: #7b5229;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* ========================================
+   10) Ideas page
+======================================== */
+
+.idea-question {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #5a3c1a;
+}
+
+/* Tags bar at top of ideas page */
+.tags-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tag {
+  background: #f1e7d8;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Ideas grid */
+.ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.idea-card {
+  background: #fffaf3;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.featured-idea {
+  border: 2px solid #e8d6b8;
+}
+
+.idea-label {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #8a6a3a;
+}
+
+.idea-text {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+.idea-tags {
+  margin-bottom: 15px;
+}
+
+.idea-tags span {
+  background: #f3eadb;
+  padding: 4px 10px;
+  border-radius: 14px;
+  margin-left: 6px;
+  font-size: 0.85rem;
+}
+
+.idea-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.idea-actions button.active {
+  background: #8a5a2b;
+  color: white;
+}
+
+.agree-btn,
+.disagree-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #f0e2c6;
+}
+
+/* Comment box under each idea */
+.idea-comment textarea {
+  width: 100%;
+  height: 70px;
+  margin-top: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.send-comment {
+  margin-top: 8px;
+  padding: 6px 12px;
+  border: none;
+  background: #d9c4a0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ========================================
+   11) Footer
+======================================== */
+
+.site-footer {
+  background: #1f1a16;
+  color: #efe7da;
+  padding: 34px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.footer-content h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.footer-content p {
+  margin: 0;
+  color: #d8cdbf;
+}
+
+.footer-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #efe7da;
+}
+
+.footer-links a:hover {
+  color: #d8b182;
+}
+
+/* ========================================
+   12) Responsive styles
+======================================== */
+
+@media (max-width: 900px) {
+  .cards-grid-large,
+  .cards-grid-small,
+  .quotes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 76px;
+    right: 16px;
+    left: 16px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: #fffaf4;
+    border: 1px solid #eadfce;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .main-nav a {
+    margin-left: 0;
+    padding: 14px 16px;
+    border-bottom: 1px solid #efe5d6;
+  }
+
+  .main-nav a:last-child {
+    border-bottom: 0;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .hero {
+    padding: 90px 0 70px;
+  }
+
+  .section-space {
+    padding: 65px 0;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .logo img {
+    width: 34px;
+  }
+}
+
+<figure class="quote-card">
+  <blockquote>
+    <p>ليس من الوقار الأدب في البستان.</p>
+  </blockquote>
+
+  <button class="copy-quote-btn" type="button">نسخ الاقتباس</button>
+  <figcaption class="quote-source">الشافعي</figcaption>
+</figure>

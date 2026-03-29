@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <!-- Basic page metadata -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أفكار | قبس</title>
+  <meta
+    name="description"
+    content="صفحة الأفكار في قبس: مساحة للتأمل في المعاني، وطرح أطروحات قصيرة تدعو القارئ للتفكير والمشاركة."
+  />
+
+  <!-- Google font for logo -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <!-- Site header -->
+  <header class="site-header">
+    <div class="container header-content">
+      <!-- Logo -->
+      <a href="../index.html" class="logo" aria-label="العودة إلى الصفحة الرئيسية">
+        <img src="../images/flame.png" alt="شعار قبس" />
+        <span class="logo-text">قبس</span>
+      </a>
+
+      <!-- Mobile menu button -->
+      <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+        ☰
+      </button>
+
+      <!-- Main navigation -->
+      <nav class="main-nav" id="mainNav">
+        <a href="../index.html">الرئيسية</a>
+        <a href="basair.html">بصائر</a>
+        <a href="afkar.html">أفكار</a>
+        <a href="quotes.html">اقتباسات</a>
+        <a href="about.html">عن قبس</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section class="hero hero-inner">
+      <div class="container hero-content">
+        <p class="hero-tag">أفكار</p>
+        <h1>مساحة للتأمل في المعاني</h1>
+        <p class="hero-text">
+          هنا تُطرح أفكار قصيرة ومركزة، لا لتُنهي السؤال، بل لتفتح باب التفكير فيه.
+        </p>
+      </div>
+    </section>
+
+    <!-- Question of the day -->
+    <section class="section-space">
+      <div class="container narrow">
+        <div class="idea-question">
+          <h2>سؤال اليوم</h2>
+          <p>
+            هل الإنسان يطلب الحقيقة فعلًا،
+            أم يطلب الفكرة التي تمنحه الطمأنينة؟
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophical tags -->
+    <section class="section-space alt-section">
+      <div class="container">
+        <div class="tags-bar">
+          <span class="tag">الوعي</span>
+          <span class="tag">النفس</span>
+          <span class="tag">الأخلاق</span>
+          <span class="tag">المعرفة</span>
+          <span class="tag">المجتمع</span>
+          <span class="tag">المعنى</span>
+          <span class="tag">الزمن</span>
+          <span class="tag">الهوية</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured idea -->
+    <section class="section-space">
+      <div class="container narrow">
+        <article class="idea-card featured-idea" data-idea-id="featured-idea-1">
+          <p class="idea-label">فكرة مميزة</p>
+
+          <p class="idea-text">
+            بعض الناس لا يهربون من الحقيقة لأنها باطلة،
+            بل لأنها ستجبرهم على مراجعة أنفسهم.
+          </p>
+
+          <div class="idea-tags">
+            <span>الوعي</span>
+            <span>المعرفة</span>
+            <span>الذات</span>
+          </div>
+
+          <div class="idea-actions">
+              <button class="agree-btn" type="button" data-action="agree">أتفق</button>
+              <button class="disagree-btn" type="button" data-action="disagree">أختلف</button>
+         </div>
+
+          <div class="idea-comment">
+            <p>أضف فكرتك حول هذه الأطروحة</p>
+            <textarea placeholder="اكتب تعليقك أو تأملك هنا..."></textarea>
+            <button class="send-comment" type="button">إرسال</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Ideas grid -->
+    <section class="section-space alt-section">
+      <div class="container">
+        <div class="ideas-grid">
+          <!-- Idea card 1 -->
+          <article class="idea-card" data-idea-id="idea-1">
+            <p class="idea-text">
+              ليس كل وضوح راحة،
+              فبعض الحقائق حين تتجلى
+              تربك الإنسان قبل أن تهديه.
+            </p>
+
+            <div class="idea-tags">
+              <span>الوعي</span>
+              <span>المعنى</span>
+            </div>
+
+            <div class="idea-actions">
+  <button class="agree-btn" type="button" data-action="agree">أتفق</button>
+  <button class="disagree-btn" type="button" data-action="disagree">أختلف</button>
+</div>
+
+            <div class="idea-comment">
+              <p>أضف فكرتك</p>
+              <textarea placeholder="ما رأيك في هذه الفكرة؟"></textarea>
+              <button class="send-comment" type="button">إرسال</button>
+            </div>
+          </article>
+
+          <!-- Idea card 2 -->
+          <article class="idea-card" data-idea-id="idea-2">
+            <p class="idea-text">
+              قد تكون العزلة أحيانًا
+              محاولة للنجاة من الضجيج،
+              لا هروبًا من الحياة.
+            </p>
+
+            <div class="idea-tags">
+              <span>النفس</span>
+              <span>العزلة</span>
+            </div>
+
+            <div class="idea-actions">
+  <button class="agree-btn" type="button" data-action="agree">أتفق</button>
+  <button class="disagree-btn" type="button" data-action="disagree">أختلف</button>
+</div>
+
+            <div class="idea-comment">
+              <p>أضف فكرتك</p>
+              <textarea placeholder="ما رأيك في هذه الفكرة؟"></textarea>
+              <button class="send-comment" type="button">إرسال</button>
+            </div>
+          </article>
+
+          <!-- Idea card 3 -->
+          <article class="idea-card" data-idea-id="idea-3">
+            <p class="idea-text">
+              ليس كل صمت حكمة،
+              لكن بعض الحكمة
+              لا تظهر إلا في الصمت.
+            </p>
+
+            <div class="idea-tags">
+              <span>الأخلاق</span>
+              <span>النفس</span>
+            </div>
+
+            <div class="idea-actions">
+  <button class="agree-btn" type="button" data-action="agree">أتفق</button>
+  <button class="disagree-btn" type="button" data-action="disagree">أختلف</button>
+</div>
+            <div class="idea-comment">
+              <p>أضف فكرتك</p>
+              <textarea placeholder="ما رأيك في هذه الفكرة؟"></textarea>
+              <button class="send-comment" type="button">إرسال</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <h3>قبس</h3>
+        <p>مساحة للقراءة والتأمل في الأفكار والمعاني.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript file -->
+   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script>
+<script src="../js/ideas.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
